@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbmsl21ljt5ui"]
+
+[ext_resource type="Script" path="res://TextBubble/text_bubble.gd" id="1_5tip0"]
+[ext_resource type="AudioStream" uid="uid://xopmeul8ty6r" path="res://TextBubble/bip1.wav" id="3_qv2jt"]
+[ext_resource type="AudioStream" uid="uid://ckmu6wxd8spep" path="res://TextBubble/bip2.wav" id="4_jn2un"]
+[ext_resource type="AudioStream" uid="uid://bk7rl7ii5i3rh" path="res://TextBubble/bip3.wav" id="5_82yem"]
+[ext_resource type="AudioStream" uid="uid://0w6hx2grkmh5" path="res://TextBubble/bip4.wav" id="6_ur4xy"]
+
+[node name="TextBubble" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_5tip0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+
+[node name="bip1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qv2jt")
+
+[node name="bip2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jn2un")
+
+[node name="bip3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_82yem")
+
+[node name="bip4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ur4xy")

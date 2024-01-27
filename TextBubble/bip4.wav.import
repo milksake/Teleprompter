@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bk7rl7ii5i3rh"
-path="res://.godot/imported/bip3.wav-9a2a70992bbe5fe7eeca2676bcaf0254.sample"
+uid="uid://0w6hx2grkmh5"
+path="res://.godot/imported/bip4.wav-f367466ae37fabbbb5773f1371a461c7.sample"
 
 [deps]
 
-source_file="res://TTS/bip3.wav"
-dest_files=["res://.godot/imported/bip3.wav-9a2a70992bbe5fe7eeca2676bcaf0254.sample"]
+source_file="res://TextBubble/bip4.wav"
+dest_files=["res://.godot/imported/bip4.wav-f367466ae37fabbbb5773f1371a461c7.sample"]
 
 [params]
 
