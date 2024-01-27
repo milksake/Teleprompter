@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmwh7k8da7s70"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
+[ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="2_x3lw5"]
+
+[sub_resource type="Resource" id="Resource_0pt7l"]
+script = ExtResource("2_x3lw5")
+text = "Lorem ipsum dolor sit amet, *conejo|consectetur* adipiscing elit. Nullam aliquam nec lorem in *uretra|pharetra*. Quisque venenatis dolor at augue feugiat, et *komodo|commodo* dolor malesuada. Donec ligula ligula, *tambor|tempus* sit amet tincidunt eu, tempor eget metus. Nunc et ipsum ac *opus|magna* accumsan vehicula a posuere justo."
+word_bank = Array[String]([])
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0bhv7")
+text_script = SubResource("Resource_0pt7l")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tele" parent="CanvasLayer" instance=ExtResource("2_4uqmi")]
+unique_name_in_owner = true

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ieyp6cnhjin5"]
+
+[sub_resource type="Gradient" id="Gradient_1x5um"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.423529, 0.247059, 0.247059, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fjkha"]
+gradient = SubResource("Gradient_1x5um")
+
+[node name="TextOption" type="Sprite2D"]
+scale = Vector2(1.78947, 0.763359)
+texture = SubResource("GradientTexture2D_fjkha")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
