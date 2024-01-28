@@ -7,10 +7,12 @@ var finished_input = false
 
 @onready var tele := %Tele
 @onready var word_bank := %WordBank
+@onready var text_bubble := $TextBubble
 
 func _ready():
 	finished_input = tele.initialize_values(text_script.text)
 	word_bank.create_text_options(text_script.word_bank)
+	text_bubble.add_text(tele.label.get_parsed_text().lstrip(" \n"))
 
 func _process(delta):
 	if not finished_scrolling:
