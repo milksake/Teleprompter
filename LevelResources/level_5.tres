@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ScriptResource" load_steps=7 format=3 uid="uid://b2sq7hiu1rcen"]
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=8 format=3 uid="uid://b2sq7hiu1rcen"]
 
 [ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_wifku"]
 [ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_ytg4c"]
@@ -19,9 +19,12 @@ text = "solar"
 script = ExtResource("2_ytg4c")
 text = "paris"
 
+[sub_resource type="Resource" id="Resource_0hkjm"]
+script = ExtResource("2_ytg4c")
+text = "hombres"
+
 [resource]
 script = ExtResource("1_wifku")
-text = "ATENCIÓN. ¡¡ATENCIÓN!!. NO DESENCHUFE A SU *ABUELA|televisor*. Graves altercados entre la federación de comercio galáctica y la républica independiente de mundos del sistema *nervioso|solar*. Debido a esto la federación lanzó un ataque nuclear. Se esperas que ojivas de 50 megatones impacten en las siguientes ciudades. NUEVA YORK. MOSCÚ. LONDRES. BERLÍN. *CIUDAD GÓTICA|paris*. PEKÍN. TOKIO. SEUL. TEL AVIV. RIYADH. MEXICO DF. LIMA.
-Los ciudadanos de esos lugares vayan a los refugios antibombas más cercanos. Se espera un respuesta militar de parte de la república del sistema solar. MÁS COMUNICACIONES LUEGO DE ESTE COMERCIAL. ¿Tienes disfunción eréctil?. Prueba ZEUS, la medicina de los dioses."
-word_bank = Array[ExtResource("2_ytg4c")]([SubResource("Resource_rvpt8"), SubResource("Resource_w6ryl"), SubResource("Resource_xd6u6"), SubResource("Resource_wmt33")])
+text = "ATENCIÓN. ¡¡ATENCIÓN!!. NO DESENCHUFE A SU *ABUELA|televisor*. Graves altercados entre la federación de comercio galáctica y la républica independiente de mundos del sistema *nervioso|solar*. Debido a esto la federación lanzó un ataque nuclear. Se esperas que ojivas de 50 megatones impacten en las siguientes ciudades. NUEVA YORK. MOSCÚ. LONDRES. BERLÍN. *CIUDAD GÓTICA|paris*. PEKÍN. TOKIO. SEUL. TEL AVIV. RIYADH. MEXICO DF. LIMA. Los ciudadanos de esos lugares vayan a los refugios antibombas más cercanos. Se espera un respuesta militar de parte de la república del sistema solar. MÁS COMUNICACIONES LUEGO DE ESTE COMERCIAL. ¿Tienes disfunción eréctil?. Prueba ZEUS, la medicina de los *niños|hombres*."
+word_bank = Array[ExtResource("2_ytg4c")]([SubResource("Resource_rvpt8"), SubResource("Resource_w6ryl"), SubResource("Resource_xd6u6"), SubResource("Resource_wmt33"), SubResource("Resource_0hkjm")])
 positions = Array[Vector2i]([])
