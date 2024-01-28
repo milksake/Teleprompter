@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=8 format=3 uid="uid://c5mpyep5t0aqm"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_a5p3x"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_cgkam"]
+
+[sub_resource type="Resource" id="Resource_fts6c"]
+script = ExtResource("2_cgkam")
+text = "biologia"
+
+[sub_resource type="Resource" id="Resource_2ulbb"]
+script = ExtResource("2_cgkam")
+text = "perro"
+
+[sub_resource type="Resource" id="Resource_syuax"]
+script = ExtResource("2_cgkam")
+text = "medusa"
+
+[sub_resource type="Resource" id="Resource_4mq11"]
+script = ExtResource("2_cgkam")
+text = "atlantico"
+
+[sub_resource type="Resource" id="Resource_b1cl7"]
+script = ExtResource("2_cgkam")
+text = "cientificos"
+
+[resource]
+script = ExtResource("1_a5p3x")
+text = "NOTICIAS CIENTÍFICAS. .Un equipo internacional de *comediantes|cientificos* ha realizado un descubrimiento sorprendente en las profundidades del oceano *puneño|atlantico*. Durante una expedición de investigación submarina, encontraron una nueva especie de *pizza|medusa* bioluminiscente que emite destellos de luz en un patrón fascinante. Este descubrimiento podría tener implicaciones importantes para la *proctología|biologia* marina.s"
+word_bank = Array[ExtResource("2_cgkam")]([SubResource("Resource_fts6c"), SubResource("Resource_2ulbb"), SubResource("Resource_syuax"), SubResource("Resource_4mq11"), SubResource("Resource_b1cl7")])
+positions = Array[Vector2i]([])
