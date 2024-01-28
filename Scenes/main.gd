@@ -19,13 +19,15 @@ func _ready():
 		text_script = load("res://LevelResources/level_" + Globals.current_level + ".tres")
 	finished_input = tele.initialize_values(text_script.text)
 	word_bank.create_text_options(text_script.word_bank)
-	text_bubble.add_text(tele.label.get_parsed_text())
-	var back = text_script.background.instantiate()
-	screen_nodes.add_child(back)
+	if text_script.background != null:
+		var back = text_script.background.instantiate()
+		screen_nodes.add_child(back)
 
 func _process(delta):
-	if (finished_input and finished_scrolling) and not disable:
+	if (finished_input or finished_scrolling) and not disable:
 		disable = true
+		finished_input = true
+		text_bubble.add_text(tele.label.get_parsed_text())
 		var t := create_tween()
 		t.tween_property(%Music, "volume_db", -20, 1)
 		create_finish_menu()
@@ -58,6 +60,8 @@ func create_finish_menu():
 	new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
 
 func _on_word_bank_display(scene):
+	if scene == null:
+		return
 	var new_scene = scene.instantiate()
 	new_scene.position = Vector2(text_script.positions[tele.current_index])
 	screen_nodes.add_child(new_scene)

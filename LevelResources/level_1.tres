@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=7 format=3 uid="uid://sorksk1f7wct"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_x1xh3"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_ic6hn"]
+
+[sub_resource type="Resource" id="Resource_88pnx"]
+script = ExtResource("2_ic6hn")
+text = "escuela"
+
+[sub_resource type="Resource" id="Resource_dryqe"]
+script = ExtResource("2_ic6hn")
+text = "computo"
+
+[sub_resource type="Resource" id="Resource_vh10v"]
+script = ExtResource("2_ic6hn")
+text = "animacion"
+
+[sub_resource type="Resource" id="Resource_ju05e"]
+script = ExtResource("2_ic6hn")
+text = "independencia"
+
+[resource]
+script = ExtResource("1_x1xh3")
+text = "NOTICIAS MATINALES. Esta mañana en la ciudad de Arequipa.
+Hampones robaron equipos de *buceo|computo* del emblematico colegio *Sideral Carrión|independencia*.
+Los ladrones hicieron cosplay de famosos ánimes para pasar desapercibidos como alumnos. El director de la *morge|escuela* pide mayor presencia policial en la zona del colegio y una investigación profunda para dar con el equipo robado. Seguiremos dando actualizaciónes."
+word_bank = Array[ExtResource("2_ic6hn")]([SubResource("Resource_88pnx"), SubResource("Resource_dryqe"), SubResource("Resource_vh10v"), SubResource("Resource_ju05e")])
+positions = Array[Vector2i]([])
