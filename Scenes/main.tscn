@@ -83,10 +83,10 @@ scale = Vector2(9, 9)
 texture = ExtResource("6_vvf1y")
 
 [node name="TextBubble" parent="." instance=ExtResource("7_j6hh5")]
-offset_left = 136.0
-offset_top = 64.0
-offset_right = 458.0
-offset_bottom = 136.0
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 512.0
+offset_bottom = 160.0
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

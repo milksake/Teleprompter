@@ -19,7 +19,7 @@ func _ready():
 		text_script.load("res://LevelResources/level_" + Globals.current_level + ".tres")
 	finished_input = tele.initialize_values(text_script.text)
 	word_bank.create_text_options(text_script.word_bank)
-	text_bubble.add_text(tele.label.get_parsed_text().lstrip(" \n"))
+	text_bubble.add_text(tele.label.get_parsed_text())
 
 func _process(delta):
 	if (finished_input and finished_scrolling) and not disable:

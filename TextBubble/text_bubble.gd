@@ -8,7 +8,6 @@ var text_string := ""
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout", add_char)
-	#add_text("NOTICIA DE ÚLTIMO MINUTO. Osito Peru muere tras un choque múltiple en la carretera central.")
 
 func add_char():
 	if text_index < text_string.length():
@@ -24,6 +23,7 @@ func add_char():
 		text_index += 1
 
 func add_text(new_text: String):
+	new_text = new_text.lstrip(" \t\r\n").rstrip(" \t\r\n")
 	text = ""
 	text_string = new_text
 	text_index = 0
