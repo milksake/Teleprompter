@@ -64,6 +64,9 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 vertical_speed = 20.0
+form_prev = "[shake][color=#9d303b]|[/color][/shake]"
+form_during = "[pulse freq=1.0 color=#ffffff40 ease=-2.0][color=yellow]|[/color][/pulse]"
+form_after = "[wave amp=10.0 freq=2.0 connected=1][color=#7ec4c1]|[/color][/wave]"
 padd = 14
 
 [node name="WordBank" parent="CanvasLayer/VBoxContainer" instance=ExtResource("4_datnw")]
@@ -71,7 +74,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
-columns = 5
 
 [node name="ScreenNodes" type="Node2D" parent="."]
 unique_name_in_owner = true

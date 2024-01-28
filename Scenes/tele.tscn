@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqn3p7vl1s6uf"]
+[gd_scene load_steps=6 format=3 uid="uid://dqn3p7vl1s6uf"]
 
 [ext_resource type="Script" path="res://Scenes/tele.gd" id="1_0iev6"]
+[ext_resource type="Script" path="res://TextEffects/ShineTextEffect.gd" id="2_5seku"]
 
 [sub_resource type="Gradient" id="Gradient_bxqpe"]
 offsets = PackedFloat32Array(0)
@@ -8,6 +9,9 @@ colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_aybaj"]
 gradient = SubResource("Gradient_bxqpe")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ev0xt"]
+script = ExtResource("2_5seku")
 
 [node name="Tele" type="TextureRect"]
 anchors_preset = 11
@@ -36,7 +40,8 @@ theme_override_constants/margin_bottom = 70
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 scroll_active = false
+custom_effects = [SubResource("RichTextEffect_ev0xt")]
