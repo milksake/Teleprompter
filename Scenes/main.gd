@@ -12,6 +12,7 @@ var generic_menu_scene := preload("res://UI/generic_menu.tscn") as PackedScene
 @onready var text_bubble := $TextBubble
 @onready var menu_canvas := %MenuCanvas
 @onready var key_audio := %KeyAudio
+@onready var screen_nodes := %ScreenNodes
 
 func _ready():
 	if text_script == null:
@@ -51,3 +52,8 @@ func create_finish_menu():
 	var score = tele.calculate_score()
 	new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1]))])
 	new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
+
+func _on_word_bank_display(scene):
+	var new_scene = scene.instantiate()
+	new_scene.position = Vector2(text_script.positions[tele.current_index - 1])
+	screen_nodes.add_child(new_scene)

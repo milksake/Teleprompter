@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=17 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
+[ext_resource type="PackedScene" uid="uid://bevlat20gawom" path="res://LevelResources/Example/sprite_2d_1.tscn" id="2_wihcy"]
 [ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="2_x3lw5"]
 [ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="3_ybcvw"]
 [ext_resource type="PackedScene" uid="uid://kvoy5blutk6v" path="res://Scenes/word_bank.tscn" id="4_datnw"]
@@ -13,27 +14,34 @@
 [sub_resource type="Resource" id="Resource_5g1m3"]
 script = ExtResource("3_ybcvw")
 text = "consectetur"
+display_scene = ExtResource("2_wihcy")
 
 [sub_resource type="Resource" id="Resource_a027s"]
 script = ExtResource("3_ybcvw")
 text = "la pharetra"
+display_scene = ExtResource("2_wihcy")
 
 [sub_resource type="Resource" id="Resource_hivs0"]
 script = ExtResource("3_ybcvw")
 text = "commodo"
+display_scene = ExtResource("2_wihcy")
 
 [sub_resource type="Resource" id="Resource_hf34i"]
 script = ExtResource("3_ybcvw")
 text = "tempus"
+display_scene = ExtResource("2_wihcy")
 
 [sub_resource type="Resource" id="Resource_yerjy"]
 script = ExtResource("3_ybcvw")
 text = "magna"
+display_scene = ExtResource("2_wihcy")
 
 [sub_resource type="Resource" id="Resource_0pt7l"]
 script = ExtResource("2_x3lw5")
 text = "Lorem ipsum dólor sit amet, *conejo|consectetur* adipiscing elit. Nullam aliquam nec lorem in *uretra|la pharetra*. Quisque venenatis dolor at augue feugiat, et *komodo|commodo* dolor malesuada. Donec ligula ligula, *tambor|tempus* sit amet tincidunt eu, tempor eget metus. Nunc et ipsum ac *opus|magna* accumsan vehicula a posuere justo."
 word_bank = Array[ExtResource("3_ybcvw")]([SubResource("Resource_5g1m3"), SubResource("Resource_a027s"), SubResource("Resource_hivs0"), SubResource("Resource_hf34i"), SubResource("Resource_yerjy")])
+background = ExtResource("2_wihcy")
+positions = Array[Vector2i]([Vector2i(10, 0), Vector2i(-10, 0), Vector2i(10, 0), Vector2i(-10, 0), Vector2i(0, 0)])
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0bhv7")
@@ -64,6 +72,10 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.3
 columns = 5
 
+[node name="ScreenNodes" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(416, 288)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(288, 320)
@@ -87,3 +99,5 @@ stream = ExtResource("6_2rgg5")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="KeyAudio"]
 stream = ExtResource("7_hrov6")
+
+[connection signal="display" from="CanvasLayer/VBoxContainer/WordBank" to="." method="_on_word_bank_display"]

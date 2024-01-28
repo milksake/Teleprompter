@@ -9,6 +9,8 @@ var current_string_index = 0
 
 @onready var grid := %GridContainer as GridContainer
 
+signal display(scene : PackedScene)
+
 func create_text_options(text_resources : Array[TextOptionResource]):
 	grid.columns = columns
 	grid.add_theme_constant_override("h_separation", sep.x)
@@ -37,6 +39,7 @@ func manage_input(charc : String):
 		current_string_index += 1
 		if current_options.size() == 1 and current_string_index >= current_options[0].text_option_resource.text.length():
 			current_string_index = 0
+			display.emit(current_options[0].text_option_resource.display_scene)
 			current_options[0].call_deferred("queue_free")
 			current_options = []
 			return 2
