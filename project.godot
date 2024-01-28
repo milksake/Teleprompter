@@ -11,12 +11,19 @@ config_version=5
 [application]
 
 config/name="Teleprompter"
+run/main_scene="res://UI/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*res://Globals/Globals.gd"
+
+[display]
+
+window/size/mode=3
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [gui]
 

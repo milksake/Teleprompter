@@ -1,14 +1,22 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=13 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
 [ext_resource type="PackedScene" uid="uid://kvoy5blutk6v" path="res://Scenes/word_bank.tscn" id="4_datnw"]
+[ext_resource type="Texture2D" uid="uid://dl7xk6gagwh3p" path="res://Assets/broken.png" id="4_m55ge"]
 [ext_resource type="AudioStream" uid="uid://g4svhlippxtl" path="res://Assets/Sounds/key1.wav" id="6_2rgg5"]
 [ext_resource type="Texture2D" uid="uid://dlyiwc2mlmxif" path="res://TextBubble/bubble.png" id="6_4eabu"]
 [ext_resource type="Texture2D" uid="uid://bnuu20jnwn7mh" path="res://Scenes/presentador.png" id="6_vvf1y"]
 [ext_resource type="AudioStream" uid="uid://swbxxwxxlxjx" path="res://Assets/Sounds/key2.wav" id="7_hrov6"]
 [ext_resource type="PackedScene" uid="uid://bbmsl21ljt5ui" path="res://TextBubble/text_bubble.tscn" id="7_j6hh5"]
 [ext_resource type="AudioStream" uid="uid://bq3bhy3kdmikt" path="res://Assets/Music/theme_1.wav" id="11_v47c5"]
+
+[sub_resource type="Gradient" id="Gradient_p488h"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5hleq"]
+gradient = SubResource("Gradient_p488h")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0bhv7")
@@ -43,6 +51,16 @@ size_flags_stretch_ratio = 0.3
 [node name="ScreenNodes" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(416, 288)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ScreenNodes"]
+scale = Vector2(4.78461, 3.55801)
+texture = SubResource("GradientTexture2D_5hleq")
+
+[node name="Sprite2D" type="Sprite2D" parent="ScreenNodes"]
+texture_filter = 1
+position = Vector2(0, 4.0271)
+scale = Vector2(8, 8.54763)
+texture = ExtResource("4_m55ge")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
