@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=7 format=3 uid="uid://dhcajtgdljedr"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_llcxw"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_y41l2"]
+
+[sub_resource type="Resource" id="Resource_h0eh6"]
+script = ExtResource("2_y41l2")
+text = "del arbitraje"
+
+[sub_resource type="Resource" id="Resource_ep143"]
+script = ExtResource("2_y41l2")
+text = "goles"
+
+[sub_resource type="Resource" id="Resource_55f0u"]
+script = ExtResource("2_y41l2")
+text = "federacion"
+
+[sub_resource type="Resource" id="Resource_4y1uf"]
+script = ExtResource("2_y41l2")
+text = "jugadores"
+
+[resource]
+script = ExtResource("1_llcxw")
+text = "NOTICIA DEPORTIVA. El club Huracán logró conquistar el campeonato regional. Lo hizo al ganar 4 a 3 a los *enfermos|jugadores* del White Star.
+En el primer tiempo Huracán demostró ser el local y terminó el tiempo con dos *homicidios|goles*. En la segunda mitad White Star despertó y logró remontar el partido 2 a 3. A los 90 minutos Hurácan logra meter dos goles consecutivos y así ganar el partido. El DT de White Star se quejó *de la Universidad Catolica San Pablo|del arbitraje*."
+word_bank = Array[ExtResource("2_y41l2")]([SubResource("Resource_h0eh6"), SubResource("Resource_ep143"), SubResource("Resource_55f0u"), SubResource("Resource_4y1uf")])
+positions = Array[Vector2i]([])

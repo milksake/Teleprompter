@@ -25,6 +25,6 @@ text = "cientificos"
 
 [resource]
 script = ExtResource("1_a5p3x")
-text = "NOTICIAS CIENTÍFICAS. .Un equipo internacional de *comediantes|cientificos* ha realizado un descubrimiento sorprendente en las profundidades del oceano *puneño|atlantico*. Durante una expedición de investigación submarina, encontraron una nueva especie de *pizza|medusa* bioluminiscente que emite destellos de luz en un patrón fascinante. Este descubrimiento podría tener implicaciones importantes para la *proctología|biologia* marina.s"
+text = "NOTICIAS CIENTÍFICAS. Un equipo internacional de *comediantes|cientificos* ha realizado un descubrimiento sorprendente en las profundidades del océano *boliviano|atlantico*. Durante una expedición de investigación submarina, encontraron una nueva especie de *pizza|medusa* bioluminiscente que emite destellos de luz en un patrón fascinante. Este descubrimiento podría tener implicaciones importantes para la *proctología|biologia* marina."
 word_bank = Array[ExtResource("2_cgkam")]([SubResource("Resource_fts6c"), SubResource("Resource_2ulbb"), SubResource("Resource_syuax"), SubResource("Resource_4mq11"), SubResource("Resource_b1cl7")])
 positions = Array[Vector2i]([])
