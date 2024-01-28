@@ -11,6 +11,7 @@ offset_left = 128.0
 offset_top = 64.0
 offset_right = 448.0
 offset_bottom = 192.0
+theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 script = ExtResource("1_5tip0")
 

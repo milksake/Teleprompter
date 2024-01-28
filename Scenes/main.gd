@@ -16,7 +16,7 @@ var generic_menu_scene := preload("res://UI/generic_menu.tscn") as PackedScene
 
 func _ready():
 	if text_script == null:
-		text_script = load("res://LevelResources/level_" + Globals.current_level + ".tres")
+		text_script = load("res://LevelResources/level_" + str(Globals.current_level) + ".tres")
 	finished_input = tele.initialize_values(text_script.text)
 	word_bank.create_text_options(text_script.word_bank)
 	if text_script.background != null:
@@ -59,8 +59,13 @@ func create_finish_menu():
 	new_menu.change_title("Noticiero Terminado")
 	var score = tele.calculate_score()
 	if score[0] >= score[1] / 2:
-		new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Nivel Completado!"])
-		new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
+		if Globals.current_level < Globals.max_levels:
+			new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Nivel Completado!"])
+			new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
+		else:
+			new_menu.change_title("Fin del Juego")
+			new_menu.add_labels(["Bien Hecho!"])
+			new_menu.add_buttons(["Repetir", "Menu Principal"], [Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
 	else:
 		new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Skill Issue"])
 		new_menu.add_buttons(["Repetir", "Menu Principal"], [Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])

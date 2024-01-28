@@ -53,14 +53,14 @@ texture = ExtResource("6_vvf1y")
 [node name="bubble" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(288, 115)
-scale = Vector2(6, 4.882)
+scale = Vector2(11.4286, 9.3)
 texture = ExtResource("6_4eabu")
 
 [node name="TextBubble" parent="." instance=ExtResource("7_j6hh5")]
-offset_left = 90.0
-offset_top = 44.0
-offset_right = 478.0
-offset_bottom = 132.0
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 496.0
+offset_bottom = 136.0
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

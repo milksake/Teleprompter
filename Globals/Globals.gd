@@ -1,7 +1,8 @@
 extends Node
 
 var main_scene := preload("res://Scenes/main.tscn")
-var current_level = 0
+var current_level = 1
+var max_levels = 5
 
 func restart_level():
 	get_tree().change_scene_to_packed(main_scene)
