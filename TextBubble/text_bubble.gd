@@ -24,14 +24,14 @@ func add_char():
 		if text_index >= text_list.size():
 			return
 		timer.start()
-		text = text_list[text_index]
+		text = text_list[text_index] + ("." if text_index < text_list.size()-1 else "")
 		current_unformatted_text = get_parsed_text()
 
 func initialize_variables(new_text: String):
 	new_text = new_text.lstrip(" \t\r\n").rstrip(" \t\r\n")
 	text_list = new_text.split(". ")
 	text_index = 0
-	text = text_list[text_index]
+	text = text_list[text_index] + "."
 	current_unformatted_text = get_parsed_text()
 	visible_characters = 0
 	text_index = 0
