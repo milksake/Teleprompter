@@ -7,8 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://0w6hx2grkmh5" path="res://TextBubble/bip4.wav" id="6_ur4xy"]
 
 [node name="TextBubble" type="Label"]
-offset_right = 322.0
-offset_bottom = 176.0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 448.0
+offset_bottom = 192.0
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1

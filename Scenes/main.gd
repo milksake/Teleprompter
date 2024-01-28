@@ -22,12 +22,14 @@ func _ready():
 	if text_script.background != null:
 		var back = text_script.background.instantiate()
 		screen_nodes.add_child(back)
+	$bubble.visible = false
 
 func _process(delta):
 	if (finished_input or finished_scrolling) and not disable:
 		disable = true
 		finished_input = true
 		text_bubble.add_text(tele.label.get_parsed_text())
+		$bubble.visible = true
 		var t := create_tween()
 		t.tween_property(%Music, "volume_db", -20, 1)
 		create_finish_menu()

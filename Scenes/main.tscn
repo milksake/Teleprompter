@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=11 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
 [ext_resource type="Resource" uid="uid://sorksk1f7wct" path="res://LevelResources/level_1.tres" id="2_7dlnw"]
 [ext_resource type="PackedScene" uid="uid://kvoy5blutk6v" path="res://Scenes/word_bank.tscn" id="4_datnw"]
 [ext_resource type="AudioStream" uid="uid://g4svhlippxtl" path="res://Assets/Sounds/key1.wav" id="6_2rgg5"]
+[ext_resource type="Texture2D" uid="uid://dlyiwc2mlmxif" path="res://TextBubble/bubble.png" id="6_4eabu"]
 [ext_resource type="Texture2D" uid="uid://bnuu20jnwn7mh" path="res://Scenes/presentador.png" id="6_vvf1y"]
 [ext_resource type="AudioStream" uid="uid://swbxxwxxlxjx" path="res://Assets/Sounds/key2.wav" id="7_hrov6"]
 [ext_resource type="PackedScene" uid="uid://bbmsl21ljt5ui" path="res://TextBubble/text_bubble.tscn" id="7_j6hh5"]
@@ -51,11 +52,17 @@ position = Vector2(288, 320)
 scale = Vector2(9, 9)
 texture = ExtResource("6_vvf1y")
 
+[node name="bubble" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(288, 115)
+scale = Vector2(11.4286, 9.3)
+texture = ExtResource("6_4eabu")
+
 [node name="TextBubble" parent="." instance=ExtResource("7_j6hh5")]
-offset_left = 64.0
-offset_top = 32.0
-offset_right = 512.0
-offset_bottom = 160.0
+offset_left = 72.0
+offset_top = 40.0
+offset_right = 496.0
+offset_bottom = 136.0
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
