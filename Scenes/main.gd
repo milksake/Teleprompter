@@ -28,7 +28,7 @@ func _process(delta):
 	if (finished_input or finished_scrolling) and not disable:
 		disable = true
 		finished_input = true
-		text_bubble.add_text(tele.label.get_parsed_text())
+		text_bubble.initialize_variables(tele.label.text)
 		$bubble.visible = true
 		var t := create_tween()
 		t.tween_property(%Music, "volume_db", -20, 1)
@@ -58,8 +58,12 @@ func create_finish_menu():
 	menu_canvas.add_child(new_menu)
 	new_menu.change_title("Noticiero Terminado")
 	var score = tele.calculate_score()
-	new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1]))])
-	new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
+	if score[0] >= score[1] / 2:
+		new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Nivel Completado!"])
+		new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
+	else:
+		new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Skill Issue"])
+		new_menu.add_buttons(["Repetir", "Menu Principal"], [Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
 
 func _on_word_bank_display(scene):
 	if scene == null:

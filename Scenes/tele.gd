@@ -34,7 +34,7 @@ func initialize_values(text : String):
 	list_form_during = form_during.split('|')
 	list_form_after = form_after.split('|')
 	var padd_string = "\n".repeat(padd)
-	var tmpp = (padd_string + "[fill]" + text + "[/fill]" + padd_string)
+	var tmpp = (padd_string + text + padd_string)
 	splitted_text = tmpp.split('*')
 	
 	for i in range(1, splitted_text.size(), 2):
