@@ -16,14 +16,18 @@ var generic_menu_scene := preload("res://UI/generic_menu.tscn") as PackedScene
 
 func _ready():
 	if text_script == null:
-		text_script.load("res://LevelResources/level_" + Globals.current_level + ".tres")
+		text_script = load("res://LevelResources/level_" + Globals.current_level + ".tres")
 	finished_input = tele.initialize_values(text_script.text)
 	word_bank.create_text_options(text_script.word_bank)
 	text_bubble.add_text(tele.label.get_parsed_text())
+	var back = text_script.background.instantiate()
+	screen_nodes.add_child(back)
 
 func _process(delta):
 	if (finished_input and finished_scrolling) and not disable:
 		disable = true
+		var t := create_tween()
+		t.tween_property(%Music, "volume_db", -20, 1)
 		create_finish_menu()
 		
 	if not finished_scrolling:
@@ -55,5 +59,5 @@ func create_finish_menu():
 
 func _on_word_bank_display(scene):
 	var new_scene = scene.instantiate()
-	new_scene.position = Vector2(text_script.positions[tele.current_index - 1])
+	new_scene.position = Vector2(text_script.positions[tele.current_index])
 	screen_nodes.add_child(new_scene)
