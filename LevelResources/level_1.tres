@@ -21,6 +21,6 @@ text = "independencia"
 
 [resource]
 script = ExtResource("1_x1xh3")
-text = "NOTICIAS MATINALES. Esta mañana en la ciudad de Arequipa. Hampones robaron equipos de *buceo|computo* del emblematico colegio *Sideral Carrión|independencia*. Los ladrones hicieron cosplay de famosos ánimes para pasar desapercibidos como alumnos. El director de la *morge|escuela* pide mayor presencia policial en la zona del colegio. Además exige una investigación profunda para dar con el equipo robado. Seguiremos dando actualizaciónes."
+text = "NOTICIAS MATINALES. Esta mañana en la ciudad de Arequipa. Hampones robaron equipos de *buceo|computo* del emblematico colegio *Sideral Carrión|independencia*. Los ladrones hicieron cosplay de famosos ánimes para pasar desapercibidos como alumnos. El director de la *morge|escuela* pide mayor presencia policial en la zona del colegio. Además exige una investigación profunda para dar con el equipo robado. Seguiremos dando actualizaciones."
 word_bank = Array[ExtResource("2_ic6hn")]([SubResource("Resource_88pnx"), SubResource("Resource_dryqe"), SubResource("Resource_vh10v"), SubResource("Resource_ju05e")])
 positions = Array[Vector2i]([])
