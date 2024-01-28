@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=16 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
 [ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="2_x3lw5"]
 [ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="3_ybcvw"]
 [ext_resource type="PackedScene" uid="uid://kvoy5blutk6v" path="res://Scenes/word_bank.tscn" id="4_datnw"]
+[ext_resource type="AudioStream" uid="uid://g4svhlippxtl" path="res://Assets/Sounds/key1.wav" id="6_2rgg5"]
 [ext_resource type="Texture2D" uid="uid://bnuu20jnwn7mh" path="res://Scenes/presentador.png" id="6_vvf1y"]
+[ext_resource type="AudioStream" uid="uid://swbxxwxxlxjx" path="res://Assets/Sounds/key2.wav" id="7_hrov6"]
 [ext_resource type="PackedScene" uid="uid://bbmsl21ljt5ui" path="res://TextBubble/text_bubble.tscn" id="7_j6hh5"]
 
 [sub_resource type="Resource" id="Resource_5g1m3"]
@@ -14,7 +16,7 @@ text = "consectetur"
 
 [sub_resource type="Resource" id="Resource_a027s"]
 script = ExtResource("3_ybcvw")
-text = "pharetra"
+text = "la pharetra"
 
 [sub_resource type="Resource" id="Resource_hivs0"]
 script = ExtResource("3_ybcvw")
@@ -30,10 +32,10 @@ text = "magna"
 
 [sub_resource type="Resource" id="Resource_0pt7l"]
 script = ExtResource("2_x3lw5")
-text = "Lorem ipsum dólor sit amet, *conejo|consectetur* adipiscing elit. Nullam aliquam nec lorem in *uretra|pharetra*. Quisque venenatis dolor at augue feugiat, et *komodo|commodo* dolor malesuada. Donec ligula ligula, *tambor|tempus* sit amet tincidunt eu, tempor eget metus. Nunc et ipsum ac *opus|magna* accumsan vehicula a posuere justo."
+text = "Lorem ipsum dólor sit amet, *conejo|consectetur* adipiscing elit. Nullam aliquam nec lorem in *uretra|la pharetra*. Quisque venenatis dolor at augue feugiat, et *komodo|commodo* dolor malesuada. Donec ligula ligula, *tambor|tempus* sit amet tincidunt eu, tempor eget metus. Nunc et ipsum ac *opus|magna* accumsan vehicula a posuere justo."
 word_bank = Array[ExtResource("3_ybcvw")]([SubResource("Resource_5g1m3"), SubResource("Resource_a027s"), SubResource("Resource_hivs0"), SubResource("Resource_hf34i"), SubResource("Resource_yerjy")])
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node"]
 script = ExtResource("1_0bhv7")
 text_script = SubResource("Resource_0pt7l")
 
@@ -73,3 +75,15 @@ offset_left = 136.0
 offset_top = 64.0
 offset_right = 458.0
 offset_bottom = 136.0
+
+[node name="MenuCanvas" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="KeyAudio" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="KeyAudio"]
+stream = ExtResource("6_2rgg5")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="KeyAudio"]
+stream = ExtResource("7_hrov6")
