@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=18 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bnuu20jnwn7mh" path="res://Scenes/presentador.png" id="6_vvf1y"]
 [ext_resource type="AudioStream" uid="uid://swbxxwxxlxjx" path="res://Assets/Sounds/key2.wav" id="7_hrov6"]
 [ext_resource type="PackedScene" uid="uid://bbmsl21ljt5ui" path="res://TextBubble/text_bubble.tscn" id="7_j6hh5"]
+[ext_resource type="AudioStream" uid="uid://bq3bhy3kdmikt" path="res://Assets/Music/theme_1.wav" id="11_v47c5"]
 
 [sub_resource type="Resource" id="Resource_5g1m3"]
 script = ExtResource("3_ybcvw")
@@ -41,7 +42,7 @@ script = ExtResource("2_x3lw5")
 text = "Lorem ipsum dólor sit amet, *conejo|consectetur* adipiscing elit. Nullam aliquam nec lorem in *uretra|la pharetra*. Quisque venenatis dolor at augue feugiat, et *komodo|commodo* dolor malesuada. Donec ligula ligula, *tambor|tempus* sit amet tincidunt eu, tempor eget metus. Nunc et ipsum ac *opus|magna* accumsan vehicula a posuere justo."
 word_bank = Array[ExtResource("3_ybcvw")]([SubResource("Resource_5g1m3"), SubResource("Resource_a027s"), SubResource("Resource_hivs0"), SubResource("Resource_hf34i"), SubResource("Resource_yerjy")])
 background = ExtResource("2_wihcy")
-positions = Array[Vector2i]([Vector2i(10, 0), Vector2i(-10, 0), Vector2i(10, 0), Vector2i(-10, 0), Vector2i(0, 0)])
+positions = Array[Vector2i]([Vector2i(30, 0), Vector2i(-10, 0), Vector2i(0, 10), Vector2i(-10, 10), Vector2i(30, 10)])
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0bhv7")
@@ -99,5 +100,10 @@ stream = ExtResource("6_2rgg5")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="KeyAudio"]
 stream = ExtResource("7_hrov6")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("11_v47c5")
+autoplay = true
 
 [connection signal="display" from="CanvasLayer/VBoxContainer/WordBank" to="." method="_on_word_bank_display"]
