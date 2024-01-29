@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=8 format=3 uid="uid://b4ufpireq321v"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_d4r3o"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_4j8w8"]
+
+[sub_resource type="Resource" id="Resource_t7jd6"]
+script = ExtResource("2_4j8w8")
+text = "la puerta"
+
+[sub_resource type="Resource" id="Resource_0gsxd"]
+script = ExtResource("2_4j8w8")
+text = "la calvicie"
+
+[sub_resource type="Resource" id="Resource_flgbb"]
+script = ExtResource("2_4j8w8")
+text = "de cabello"
+
+[sub_resource type="Resource" id="Resource_vs5s4"]
+script = ExtResource("2_4j8w8")
+text = "peruano"
+
+[sub_resource type="Resource" id="Resource_72jt3"]
+script = ExtResource("2_4j8w8")
+text = "las ventas"
+
+[resource]
+script = ExtResource("1_d4r3o")
+text = "ÚLTIMO MINUTO. Cientificos descubren la cura para *el cáncer|la calvicie*. El compuesto quimico creado por empresas ACME logra crear nuevos folículos *ováricos|de cabello* en menos de una semana de aplicación constante. Se espera que se abra *tu corazón|las ventas* al público en los próximos dias. Desde este canal siempre estaremos apoyando el talento *chileno|peruano*."
+word_bank = Array[ExtResource("2_4j8w8")]([SubResource("Resource_t7jd6"), SubResource("Resource_0gsxd"), SubResource("Resource_flgbb"), SubResource("Resource_vs5s4"), SubResource("Resource_72jt3")])
+positions = Array[Vector2i]([])

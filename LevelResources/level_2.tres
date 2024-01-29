@@ -25,6 +25,6 @@ text = "practicas"
 
 [resource]
 script = ExtResource("1_vyit7")
-text = "TITULARES DE HOY. *Alienigenas|autoridades* y expertos están trabajando arduamente para abordar esta problemática. El gobierno ha anunciado medidas *testiculares|estrictas* de regulación *rectal|ambiental*. Está imponiendo sanciones a las empresas que no cumplan con los estándares establecidos. Además, se están implementando programas de concientización para promover *invasiones|practicas*. Seguiremos conectados."
+text = "TITULARES DE HOY. *Alienigenas|autoridades* y expertos están trabajando arduamente para abordar esta problemática. El gobierno ha anunciado medidas *testiculares|estrictas* de regulación *rectal|ambiental*. Está imponiendo sanciones a las empresas que no cumplan con los estándares establecidos. Además, se están implementando programas de concientización para promover buenas *invasiones|practicas*. Seguiremos conectados."
 word_bank = Array[ExtResource("2_ep5cj")]([SubResource("Resource_2ws4c"), SubResource("Resource_4aor7"), SubResource("Resource_ddjof"), SubResource("Resource_pi8r7"), SubResource("Resource_jkk5p")])
 positions = Array[Vector2i]([])

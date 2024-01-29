@@ -15,6 +15,15 @@ var generic_menu_scene := preload("res://UI/generic_menu.tscn") as PackedScene
 @onready var screen_nodes := %ScreenNodes
 
 func _ready():
+	if Globals.show_tutorial:
+		$MenuCanvas.visible = false
+		$bubble.visible = true
+		text_bubble.initialize_variables("Ayúdame corrigiendo el script: tiene algunas palabras [shake][color=#9d303b]erradas[/color][/shake]. El [pulse freq=1.0 color=#ffffff40 ease=-2.0][color=yellow]teleprompter[/color][/pulse] de la derecha las ira mostrando y apenas veas una, reemplazala por la palabra adecuada de las opciones de abajo. Para hacerlo solo debes [wave amp=10.0 freq=2.0 connected=1][color=#7ec4c1]escribir[/color][/wave] correctamente la palabra con tu teclado. Buena suerte.")
+		await text_bubble.finished_text
+		Globals.show_tutorial = false
+		Globals.restart_level()
+		return
+
 	if text_script == null:
 		text_script = load("res://LevelResources/level_" + str(Globals.current_level) + ".tres")
 	finished_input = tele.initialize_values(text_script.text)
@@ -23,6 +32,7 @@ func _ready():
 		var back = text_script.background.instantiate()
 		screen_nodes.add_child(back)
 	$bubble.visible = false
+	%Music.play()
 
 func _process(delta):
 	if (finished_input or finished_scrolling) and not disable:
@@ -34,22 +44,24 @@ func _process(delta):
 		t.tween_property(%Music, "volume_db", -20, 1)
 		create_finish_menu()
 		
-	if not finished_scrolling:
+	if not finished_scrolling and not Globals.show_tutorial:
 		finished_scrolling = tele.move_slider(delta)
 
 func _input(event):
-	if finished_input:
+	if finished_input or Globals.show_tutorial:
 		return
 	if event is InputEventKey and event.is_pressed():
 		if "a".unicode_at(0) <= event.unicode and event.unicode <= "z".unicode_at(0) or " ".unicode_at(0) == event.unicode:
 			var code = word_bank.manage_input(char(event.unicode))
 			if code == 0:
 				tele.erase_current_word()
+				$Hit.play()
 				return
 			tele.manage_input(char(event.unicode))
 			key_audio.get_children().pick_random().play()
 			if code == 2:
 				finished_input = tele.next_word()
+				$Next.play()
 				if finished_input:
 					tele.vertical_speed *= 10
 
@@ -64,7 +76,7 @@ func create_finish_menu():
 			new_menu.add_buttons(["Siguiente Nivel", "Repetir", "Menu Principal"], [Globals.next_level, Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
 		else:
 			new_menu.change_title("Fin del Juego")
-			new_menu.add_labels(["Bien Hecho!"])
+			new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Gracias por jugar!"])
 			new_menu.add_buttons(["Repetir", "Menu Principal"], [Globals.restart_level, func(): get_tree().call_deferred('change_scene_to_file', "res://UI/main_menu.tscn")])
 	else:
 		new_menu.add_labels([("Puntaje: " + str(score[0]) + "/" + str(score[1])), "Skill Issue"])
@@ -76,3 +88,6 @@ func _on_word_bank_display(scene):
 	var new_scene = scene.instantiate()
 	new_scene.position = Vector2(text_script.positions[tele.current_index])
 	screen_nodes.add_child(new_scene)
+
+func _on_text_bubble_finished_text():
+	$bubble.visible = false

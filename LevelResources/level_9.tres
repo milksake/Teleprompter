@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=11 format=3 uid="uid://bi0k8fi28i37i"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_jmk7s"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_xo0w3"]
+
+[sub_resource type="Resource" id="Resource_xj7hp"]
+script = ExtResource("2_xo0w3")
+text = "streamer"
+
+[sub_resource type="Resource" id="Resource_kcox3"]
+script = ExtResource("2_xo0w3")
+text = "asistentes"
+
+[sub_resource type="Resource" id="Resource_pmws4"]
+script = ExtResource("2_xo0w3")
+text = "avenida"
+
+[sub_resource type="Resource" id="Resource_prd81"]
+script = ExtResource("2_xo0w3")
+text = "palmeras"
+
+[sub_resource type="Resource" id="Resource_rhjax"]
+script = ExtResource("2_xo0w3")
+text = "reforzar"
+
+[sub_resource type="Resource" id="Resource_clyl7"]
+script = ExtResource("2_xo0w3")
+text = "calma"
+
+[sub_resource type="Resource" id="Resource_l0hy3"]
+script = ExtResource("2_xo0w3")
+text = "orden"
+
+[sub_resource type="Resource" id="Resource_wi7y8"]
+script = ExtResource("2_xo0w3")
+text = "personas"
+
+[resource]
+script = ExtResource("1_jmk7s")
+text = "NOTICIA DE ÚLTIMO MINUTO. Graves altercados entre la policía y los *apartados|asistentes* a la chocolatada organizada por el *ingeniero|streamer* Sideral. Esta se realiza en la *trocha|avenida* las *parteras|palmeras* 15304, Los Olivos. Las autoridades llaman a los doteros a la *ducha|calma*. Más unidades antimotines están llegando para *debilitar|reforzar* la seguridad. Se estiman que más de dos mil *simios|personas* cortaron el tránsito. Desde este canal pedimos *desorden|orden* a la población."
+word_bank = Array[ExtResource("2_xo0w3")]([SubResource("Resource_xj7hp"), SubResource("Resource_kcox3"), SubResource("Resource_pmws4"), SubResource("Resource_prd81"), SubResource("Resource_rhjax"), SubResource("Resource_clyl7"), SubResource("Resource_l0hy3"), SubResource("Resource_wi7y8")])
+positions = Array[Vector2i]([])

@@ -42,6 +42,6 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
-text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+text = "[color=ffff40][pulse]Teleprompter[/pulse][/color]"
 scroll_active = false
 custom_effects = [SubResource("RichTextEffect_ev0xt")]

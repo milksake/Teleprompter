@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=7 format=3 uid="uid://vh7ufxttobu7"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_1ra1r"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_mdrw7"]
+
+[sub_resource type="Resource" id="Resource_vvqy0"]
+script = ExtResource("2_mdrw7")
+text = "animal"
+
+[sub_resource type="Resource" id="Resource_fnyik"]
+script = ExtResource("2_mdrw7")
+text = "tiktoker"
+
+[sub_resource type="Resource" id="Resource_4l1ab"]
+script = ExtResource("2_mdrw7")
+text = "nacional"
+
+[sub_resource type="Resource" id="Resource_2o8fv"]
+script = ExtResource("2_mdrw7")
+text = "bus"
+
+[resource]
+script = ExtResource("1_1ra1r")
+text = "NOTICIA LAMENTABLE. El reconocido *youtuber|tiktoker* peruano Osito PerÚ sufre un choque múltiple en la carretera central. Se presume que perdió la vida. Al parecer se debió a la negligencia del chofer del *avión|bus* en donde viajaba. La presidenta de la republica Dina Boluarte piensa declarar luto *multiversal|nacional*."
+word_bank = Array[ExtResource("2_mdrw7")]([SubResource("Resource_vvqy0"), SubResource("Resource_fnyik"), SubResource("Resource_4l1ab"), SubResource("Resource_2o8fv")])
+positions = Array[Vector2i]([])

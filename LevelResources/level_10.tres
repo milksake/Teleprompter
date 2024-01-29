@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=11 format=3 uid="uid://4vtiu8v5jx8w"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_siiki"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_ni5x6"]
+
+[sub_resource type="Resource" id="Resource_m6naq"]
+script = ExtResource("2_ni5x6")
+text = "siento"
+
+[sub_resource type="Resource" id="Resource_7u20q"]
+script = ExtResource("2_ni5x6")
+text = "farmacia"
+
+[sub_resource type="Resource" id="Resource_wayca"]
+script = ExtResource("2_ni5x6")
+text = "disponible"
+
+[sub_resource type="Resource" id="Resource_7ec6s"]
+script = ExtResource("2_ni5x6")
+text = "conecta"
+
+[sub_resource type="Resource" id="Resource_hshyu"]
+script = ExtResource("2_ni5x6")
+text = "muerto"
+
+[sub_resource type="Resource" id="Resource_pa358"]
+script = ExtResource("2_ni5x6")
+text = "casado"
+
+[sub_resource type="Resource" id="Resource_cb3rn"]
+script = ExtResource("2_ni5x6")
+text = "global"
+
+[sub_resource type="Resource" id="Resource_3pif8"]
+script = ExtResource("2_ni5x6")
+text = "exito"
+
+[resource]
+script = ExtResource("1_siiki")
+text = "SEGMENTO DE ANUNCIANTES. 
+¿Tienes hemorroides?. Busca Nikson en tu *veterinaria|farmacia* más cercana. Con Nikson me *paro|siento* en las nubes. 
+Inversiones *Fracaso|exito*, la mejor forma de asegurar tu futuro. Consulta nuestros precios pasa asesoria financiera. 
+Funeraria \"Mi lugar feliz\" ofrece féretros a oferta. nunca fue tan facil estar *vivo|muerto*. Y si estas *divorciado|casado*, busca nuestro planes para féretros de doble plaza. 
+La *Peruvian|global* Game Jam se esta llevando a cabo este 26, 27 y 28 de enero. Crea un juego en 48 horas y *pelea|conecta* con la comunidad de jammers. No te quedes sin participar."
+word_bank = Array[ExtResource("2_ni5x6")]([SubResource("Resource_m6naq"), SubResource("Resource_7u20q"), SubResource("Resource_wayca"), SubResource("Resource_7ec6s"), SubResource("Resource_hshyu"), SubResource("Resource_pa358"), SubResource("Resource_cb3rn"), SubResource("Resource_3pif8")])
+positions = Array[Vector2i]([])

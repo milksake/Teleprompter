@@ -6,6 +6,8 @@ var current_unformatted_text : String
 @onready var timer := $Timer as Timer
 @onready var bips : Array[AudioStreamPlayer] = [$bip1, $bip2, $bip3, $bip4]
 
+signal finished_text
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.connect("timeout", add_char)
@@ -22,6 +24,9 @@ func add_char():
 		visible_characters = 0
 		text_index += 1
 		if text_index >= text_list.size():
+			await get_tree().create_timer(0.25).timeout
+			visible = false
+			finished_text.emit()
 			return
 		timer.start()
 		text = text_list[text_index] + ("." if text_index < text_list.size()-1 else "")

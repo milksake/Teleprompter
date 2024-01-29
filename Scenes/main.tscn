@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmwh7k8da7s70"]
+[gd_scene load_steps=19 format=3 uid="uid://dmwh7k8da7s70"]
 
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_0bhv7"]
 [ext_resource type="PackedScene" uid="uid://dqn3p7vl1s6uf" path="res://Scenes/tele.tscn" id="2_4uqmi"]
@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bnuu20jnwn7mh" path="res://Scenes/presentador.png" id="6_vvf1y"]
 [ext_resource type="AudioStream" uid="uid://swbxxwxxlxjx" path="res://Assets/Sounds/key2.wav" id="7_hrov6"]
 [ext_resource type="PackedScene" uid="uid://bbmsl21ljt5ui" path="res://TextBubble/text_bubble.tscn" id="7_j6hh5"]
+[ext_resource type="AudioStream" uid="uid://b1hhb6hmkb3mn" path="res://Assets/Sounds/hitHurt.wav" id="11_1o10b"]
 [ext_resource type="AudioStream" uid="uid://bq3bhy3kdmikt" path="res://Assets/Music/theme_1.wav" id="11_v47c5"]
+[ext_resource type="AudioStream" uid="uid://cb157bwxledc7" path="res://Assets/Sounds/next3.wav" id="12_3lylp"]
 
 [sub_resource type="Gradient" id="Gradient_p488h"]
 offsets = PackedFloat32Array(0)
@@ -17,6 +19,20 @@ colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5hleq"]
 gradient = SubResource("Gradient_p488h")
+
+[sub_resource type="Gradient" id="Gradient_nyclo"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.494118, 0.768627, 0.752941, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mr8s0"]
+gradient = SubResource("Gradient_nyclo")
+
+[sub_resource type="Gradient" id="Gradient_uirvr"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.505882, 0.505882, 0.505882, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2e086"]
+gradient = SubResource("Gradient_uirvr")
 
 [node name="Main" type="Node"]
 script = ExtResource("1_0bhv7")
@@ -58,13 +74,23 @@ texture = SubResource("GradientTexture2D_5hleq")
 
 [node name="Sprite2D" type="Sprite2D" parent="ScreenNodes"]
 texture_filter = 1
-position = Vector2(0, 4.0271)
-scale = Vector2(8, 8.54763)
+position = Vector2(2.99999, 6.49999)
+scale = Vector2(8.0625, 7.83333)
 texture = ExtResource("4_m55ge")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ScreenNodes"]
+position = Vector2(448, -4.5)
+scale = Vector2(9, 8.85938)
+texture = SubResource("GradientTexture2D_mr8s0")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ScreenNodes"]
+position = Vector2(448, 319.5)
+scale = Vector2(9, 1.26563)
+texture = SubResource("GradientTexture2D_2e086")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(288, 320)
+position = Vector2(288, 324)
 scale = Vector2(9, 9)
 texture = ExtResource("6_vvf1y")
 
@@ -79,6 +105,7 @@ offset_left = 90.0
 offset_top = 44.0
 offset_right = 478.0
 offset_bottom = 132.0
+scale = Vector2(1, 1.00387)
 
 [node name="MenuCanvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -96,6 +123,12 @@ stream = ExtResource("7_hrov6")
 unique_name_in_owner = true
 stream = ExtResource("11_v47c5")
 volume_db = -10.0
-autoplay = true
+
+[node name="Hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_1o10b")
+
+[node name="Next" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_3lylp")
 
 [connection signal="display" from="CanvasLayer/VBoxContainer/WordBank" to="." method="_on_word_bank_display"]
+[connection signal="finished_text" from="TextBubble" to="." method="_on_text_bubble_finished_text"]

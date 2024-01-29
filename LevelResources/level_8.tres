@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="ScriptResource" load_steps=9 format=3 uid="uid://d6gycji4r77s"]
+
+[ext_resource type="Script" path="res://TextEffects/ScriptTele.gd" id="1_sp2xj"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/TextOptionResource.gd" id="2_dl0vt"]
+
+[sub_resource type="Resource" id="Resource_v3hcc"]
+script = ExtResource("2_dl0vt")
+text = "de bengala"
+
+[sub_resource type="Resource" id="Resource_1dmgs"]
+script = ExtResource("2_dl0vt")
+text = "gareca"
+
+[sub_resource type="Resource" id="Resource_iiu0h"]
+script = ExtResource("2_dl0vt")
+text = "copa"
+
+[sub_resource type="Resource" id="Resource_34dkg"]
+script = ExtResource("2_dl0vt")
+text = "guerrero"
+
+[sub_resource type="Resource" id="Resource_pfph4"]
+script = ExtResource("2_dl0vt")
+text = "capitan"
+
+[sub_resource type="Resource" id="Resource_4b02m"]
+script = ExtResource("2_dl0vt")
+text = "qatar"
+
+[resource]
+script = ExtResource("1_sp2xj")
+text = "TERRIBLES SUCESOS. El *aguatero|capitan* de la selección, Paolo *Mechero|guerrero* vuelve a dar positivo en el análisis de doping. Así se perderá el mundial de *Checoslovaquia|qatar* 2022. El entrenador de la selección, el Tigre *Toño|gareca* confía en la apelación que está preparando la FPF. Confiamos en que nuestro capitán pueda volver y así pelear la *teta|copa* del mundo."
+word_bank = Array[ExtResource("2_dl0vt")]([SubResource("Resource_v3hcc"), SubResource("Resource_1dmgs"), SubResource("Resource_iiu0h"), SubResource("Resource_34dkg"), SubResource("Resource_pfph4"), SubResource("Resource_4b02m")])
+positions = Array[Vector2i]([])

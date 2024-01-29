@@ -13,7 +13,7 @@ config_version=5
 config/name="Teleprompter"
 run/main_scene="res://UI/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/broken.png"
 
 [autoload]
 
